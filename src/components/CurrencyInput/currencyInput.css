@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  background-color: green; 
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+select {
+  height: 41px;
+  border-radius: 10px;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.content h2 {
+  color: white;
+}
