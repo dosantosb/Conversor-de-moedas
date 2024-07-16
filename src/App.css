@@ -13,7 +13,7 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  position: relative; /* Adicionado para posição relativa */
+  position: relative;
 }
 
 .content {
@@ -24,7 +24,9 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  width: 50%; /* Divide a largura da tela ao meio */
+  width: 50%;
+  max-width: 100%; /* Largura máxima da div */
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .content h1 {
@@ -38,31 +40,29 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center; /* Centraliza o conteúdo */
   margin: 20px 0;
-  width: 50%; /* Divide a largura da tela ao meio */
+  width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .img-esquerda {
-  width: 180px;
+  max-width: 180px; /* Máxima largura da imagem */
   height: auto;
   margin-right: 10px;
 }
 
 .img-text {
-  max-width: 630px;
-  font-size: 20px;
+  flex: 1; /* Ocupa o espaço restante */
+  max-width: 100%; /* Garante que o texto não ultrapasse o container */
+  font-size: 28px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
-  
 }
 
 .img-direita {
-  position: absolute;
-  transform: translateY(130%);
-  top: 50%;
-  right: 20px;
-  width: 180px; /* Mesma largura da imagem da esquerda */
+  max-width: 180px; /* Máxima largura da imagem */
   height: auto;
+  margin-left: auto; /* Coloca a imagem à direita */
 }
 
 .footer {
@@ -80,5 +80,25 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1000px) {
+  .content {
+    width: 100%; /* Em telas menores, ocupa toda a largura disponível */
+    padding: 10px; /* Menos espaço ao redor do conteúdo */
+  }
+
+  .img-text-container {
+    flex-direction: column; /* Empilha as imagens e o texto */
+    align-items: center; /* Alinha itens ao centro */
+  }
+
+  .img-esquerda {
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  }
+
+  .img-direita {
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+  }
 }

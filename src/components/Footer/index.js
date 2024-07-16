@@ -6,7 +6,7 @@ function Footer() {
 
         <div className="container-footer">
             <footer>
-            <p>Mal feito, feito! &copy; 2024</p>
+            <p>© 2024 Conversor de moedas. Todos os direitos reservados.</p>
             </footer>
         </div>
 
